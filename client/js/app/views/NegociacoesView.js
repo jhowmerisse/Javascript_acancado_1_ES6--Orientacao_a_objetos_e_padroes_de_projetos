@@ -1,12 +1,10 @@
-class NegociacoesView {
+class NegociacoesView extends View{
 
     constructor(elemento){
-        
-        this._elemento = elemento;
+        super(elemento);
     }
 
-
-    _template(model){
+    template(model){
 
         return `
 
@@ -40,13 +38,6 @@ class NegociacoesView {
          </table>
          `;
     }
-
-    update(model){
-
-        //inner HTML recebe string e converte para elemento do dom
-        this._elemento.innerHTML = this._template(model);
-    }
-
 }
 
 
